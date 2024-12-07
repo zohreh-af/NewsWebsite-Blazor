@@ -16,7 +16,7 @@ namespace NewsWebsite.Application.DTO.Newses
 
         [Display(Name = "عنوان")]
         [MaxLength(300, ErrorMessage = "{0} نمیتواند بیشتر از {1} کاراکتر باشد. ")]
-        //[Required(ErrorMessageResourceType =)]
+        [Required(ErrorMessage ="")]
         public string Title { get; set; }
 
 

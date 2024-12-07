@@ -9,10 +9,13 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NewsWebsite.Domains\NewsWebsite.Domains.csproj" />
+    <ProjectReference Include="..\NewsWebsite.Persistence\NewsWebsite.Persistence.csproj" />
+    <ProjectReference Include="..\NewsWebsite.Shared\NewsWebsite.Shared.csproj" />
   </ItemGroup>
 
 </Project>

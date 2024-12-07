@@ -14,4 +14,9 @@
     <ProjectReference Include="..\NewsWebsite.Shared\NewsWebsite.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components\" />
+    <Folder Include="Pages\News\" />
+  </ItemGroup>
+
 </Project>

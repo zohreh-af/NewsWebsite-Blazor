@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace NewsWebsite.Application.Features.News.Commands.UpdateNews
 {
-    internal class UpdateNewsVm
+    public  class UpdateNewsVm
     {
+        public bool Result {  get; set; }   
     }
 }

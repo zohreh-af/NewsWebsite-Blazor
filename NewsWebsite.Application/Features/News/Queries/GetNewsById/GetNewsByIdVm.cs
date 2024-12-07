@@ -11,7 +11,7 @@ namespace NewsWebsite.Application.Features.News.Queries
 
         [Display(Name = "عنوان")]
         [MaxLength(300, ErrorMessage = "{0} نمیتواند بیشتر از {1} کاراکتر باشد. ")]
-        [Required(ErrorMessageResourceType =)]
+        [Required(ErrorMessage = " لطفا {0} را وارد کنید")]
         public string Title { get; set; }
 
 
