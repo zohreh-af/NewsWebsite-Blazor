@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NewsWebsite.Application.Features.News.Queries.GetNewsByName
 {
-    internal class GetNewsByTitleVm
+    public class GetNewsByTitleVm
     {
     }
 }

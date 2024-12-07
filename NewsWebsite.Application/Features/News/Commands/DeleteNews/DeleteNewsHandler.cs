@@ -1,12 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace NewsWebsite.Application.Features.News.Commands.DeleteNews
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using NewsWebsite.Application.Features.News.Commands.DeleteNews;
+using NewsWebsite.Persistence.Contexts;
+
+namespace NewsWebsite.Application.Features.News.Commands
 {
-    internal class DeleteNewsHandler
+    public class DeleteNewsHandler(NewsWebsiteDbContext newsWebsiteDbContext) : IRequestHandler<DeleteNewsCommand, DeleteNewsVm>
     {
+        public async Task<DeleteNewsVm> Handle(DeleteNewsCommand request, CancellationToken cancellationToken)
+        {
+           var news = await newsWebsiteDbContext.News.FirstOrDefaultAsync(n => n.NewsId == request.NewsId ,cancellationToken);
+            if (news == null)
+            {
+                return new DeleteNewsVm
+                {
+                    IsNewsDeleted = false,
+                };
+            }
+            newsWebsiteDbContext.News.Remove(news);
+            var result = await newsWebsiteDbContext.SaveChangesAsync(cancellationToken);    
+
+            return 
+        }
     }
+
 }

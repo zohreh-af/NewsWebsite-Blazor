@@ -1,0 +1,39 @@
+﻿@page "/newses/add-news"
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="post_content">
+                <div class="col-md-3">
+                    <div class="form-group">
+                       <EditForm Model="@NewsModel" OnValidSubmit="HandelCreateNews">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>عنوان : </label>
+                            <InputText class="form-control" @bind-Value="@NewsModel.Title" placeholder="عنوان خبر" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>توضیحات کوتاه : </label>
+                            <InputTextArea class="form-control" @bind-Value="@NewsModel.ShortDescription" placeholder="توضیحات کوتاه" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>توضیحات : </label>
+                            <InputTextArea class="form-control" @bind-Value="@NewsModel.Description" placeholder="توضیحات" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <button class="btn btn-success"type="submit">ثبت خبر</button>
+                        </div>
+                    </div>
+                </EditForm>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

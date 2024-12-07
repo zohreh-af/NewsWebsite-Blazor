@@ -1,6 +1,4 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using NewsWebsite.Data;
+
 using NewsWebsite.Shared.TextResources;
 
 namespace NewsWebsite
@@ -14,7 +12,7 @@ namespace NewsWebsite
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
-            builder.Services.AddSingleton<WeatherForecastService>();
+            
             ResourceManager.Initialize(builder.Configuration);
             var app = builder.Build();
 
