@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
+using NewsWebsite.Application.Features.News.Queries;
+
 
 namespace NewsWebsite.Application.Features.News.Queries.GetNewsByTitle
 {
-    internal class GetNewsByTitleQuery
+    public class GetNewsByTitleQuery :IRequest<GetNewsByTitleVm>
     {
+        public string Title { get; set; }
     }
 }

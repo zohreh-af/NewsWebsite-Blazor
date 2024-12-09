@@ -1,8 +1,5 @@
-﻿using AutoMapper;
-using MediatR;
-using Microsoft.AspNetCore.Http;
+﻿using MediatR;
 using NewsWebsite.Application.Features.News.Commands.UpdateNews;
-using NewsWebsite.Persistence.Contexts;
 using System.ComponentModel.DataAnnotations;
 
 namespace NewsWebsite.Application.Features.News.Commands

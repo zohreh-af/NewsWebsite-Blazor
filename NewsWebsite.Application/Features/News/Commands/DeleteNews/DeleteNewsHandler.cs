@@ -1,9 +1,8 @@
-﻿
-
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using NewsWebsite.Application.Features.News.Commands.DeleteNews;
 using NewsWebsite.Persistence.Contexts;
+
 
 namespace NewsWebsite.Application.Features.News.Commands
 {
@@ -16,14 +15,18 @@ namespace NewsWebsite.Application.Features.News.Commands
             {
                 return new DeleteNewsVm
                 {
-                    IsNewsDeleted = false,
+                    Result = false,
                 };
             }
             newsWebsiteDbContext.News.Remove(news);
             var result = await newsWebsiteDbContext.SaveChangesAsync(cancellationToken);    
 
-            return 
+            return new()
+            {
+                Result = false,
+            };
         }
     }
 
 }
+
